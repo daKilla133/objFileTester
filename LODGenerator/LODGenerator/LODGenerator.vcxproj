@@ -72,6 +72,9 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <IncludePath>$(SolutionDir)\Debug\Dependencies\include\GL;$(SolutionDir)\Debug\Dependencies\include\GLFW;$(SolutionDir)\Debug\Dependencies\include\glm;$(IncludePath)</IncludePath>
     <LibraryPath>$(SolutionDir)\Debug\Dependencies\lib\lib-vc2015;$(SolutionDir)\Debug\Dependencies\lib\glew;$(LibraryPath)</LibraryPath>
+    <PostBuildEventUseInBuild>true</PostBuildEventUseInBuild>
+    <PreBuildEventUseInBuild>true</PreBuildEventUseInBuild>
+    <PreLinkEventUseInBuild>true</PreLinkEventUseInBuild>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>D:\Documents\programDocs\OpenGL\GLFW\glfw-3.1.2\include;D:\Documents\programDocs\OpenGL\glew-1.13.0\include\GL;$(IncludePath)</IncludePath>
@@ -82,13 +85,16 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>$(SolutionDir)\Debug\Dependencies\include;$(SolutionDir)\Debug\Dependencies\include\GL;$(SolutionDir)\Debug\Dependencies\include\GLFW;$(SolutionDir)\Debug\Dependencies\include\glm;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_SCL_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
       <AdditionalDependencies>glfw3dll.lib;glew32.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalLibraryDirectories>D:\Documents\programDocs\OpenGL\glew-1.13.0\lib\Release\Win32;D:\Documents\programDocs\OpenGL\GLFW\glfw-3.1.2.bin.WIN32\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\Debug\Dependencies\lib\Boost-libs;$(SolutionDir)\Debug\Dependencies\lib\glew;$(SolutionDir)\Debug\Dependencies\lib\lib-vc2015;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(SolutionDir)res" "$(SolutionDir)$(Configuration)\res"</Command>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">

@@ -1,9 +1,11 @@
-#include "Window.h"
+#include <iostream>
+#include "ObjLoader.cpp"
 
 int main()
 {
-	Window win(500, 500);
-	win.init();
-	win.run();
+	ObjIntermediate ob;
+	ob.LoadObj("../res/untitled.obj");
+
+	std::cin.get();
 	return 0;
 }

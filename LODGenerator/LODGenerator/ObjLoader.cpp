@@ -284,7 +284,7 @@ public:
 		if (fileStream.fail())
 		{
 			cerr("Failed to open file specified.");
-			exit(1);
+			return;
 		}
 		while (fileStream.good())
 		{

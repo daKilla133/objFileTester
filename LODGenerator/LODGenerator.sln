@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LODGenerator", "LODGenerato
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "res", "res", "{B2D33DC1-002D-4E24-AA13-58FCAC1D671E}"
 	ProjectSection(SolutionItems) = preProject
+		res\cube.mtl = res\cube.mtl
+		res\cube.obj = res\cube.obj
 		res\untitled.mtl = res\untitled.mtl
 		res\untitled.obj = res\untitled.obj
 	EndProjectSection

@@ -180,7 +180,7 @@ public:
 				faceList.emplace_back(faceOut);
 			}
 			fList.clear();
-			show(&tokens[0], tokens.size());
+			//show(&tokens[0], tokens.size());
 		}
 		for (const auto &a : faceList)
 		{
@@ -240,7 +240,7 @@ public:
 				boost::split(tookens, tokens[a], boost::is_any_of("/"));
 				index.emplace_back(stoi(tookens[0]));
 				faceOut.vertices.emplace_back(vertexList[std::stoi(tookens[0]) - 1]);
-				faceOut.UVs.emplace_back(uvList[std::stoi(tookens[2]) - 1]);
+				faceOut.UVs.emplace_back(uvList[std::stoi(tookens[1]) - 1]);
 			}
 		}
 		else if (crash == 3)
@@ -253,7 +253,7 @@ public:
 				boost::split(tookens, tokens[a], boost::is_any_of("//"));
 				index.emplace_back(stoi(tookens[0]));
 				faceOut.vertices.emplace_back(vertexList[std::stoi(tookens[0]) - 1]);
-				faceOut.normals.emplace_back(normalList[std::stoi(tookens[2]) - 1]);
+				faceOut.normals.emplace_back(normalList[std::stoi(tookens[1]) - 1]);
 			}
 		}
 		else if (crash == 4)
@@ -266,8 +266,8 @@ public:
 				boost::split(tookens, tokens[a], boost::is_any_of("/"));
 				index.emplace_back(stoi(tookens[0]));
 				faceOut.vertices.emplace_back(vertexList[std::stoi(tookens[0]) - 1]);
-				faceOut.UVs.emplace_back(uvList[stoi(tookens[2]) - 1]);
-				faceOut.normals.emplace_back(normalList[stoi(tookens[4]) - 1]);
+				faceOut.UVs.emplace_back(uvList[stoi(tookens[1]) - 1]);
+				faceOut.normals.emplace_back(normalList[stoi(tookens[2]) - 1]);
 			}
 		}
 		faceOut.triangulate(index);
@@ -309,7 +309,7 @@ public:
 			{
 				outMaterial.materials[currentMaterialIndex].ambientTexture = tokens[1];
 			}
-			show(&tokens[0], tokens.size());
+			/*show(&tokens[0], tokens.size());*/
 		}
 	}
 };

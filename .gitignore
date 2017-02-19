@@ -3,3 +3,5 @@
 ################################################################################
 
 /LODGenerator/Debug/Dependencies/lib/Boost-libs/geometry/doc/doxy/doxygen_output/html_by_doxygen/structboost_1_1geometry_1_1detail_1_1helper__geometries_1_1default__units_3_01_geometry_00_01cartesian__tag_01_4.html
+*.VC.opendb
+*.VC.db
